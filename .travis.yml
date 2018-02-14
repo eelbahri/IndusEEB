@@ -6,8 +6,6 @@ php:
 
 before_script:
     - composer install
-    - docker pull phpqa/phpcs
-    - docker pull phpqa/security-checker
 
 script:
     - docker run --rm -v $PWD:/app phpqa/phpcs .
