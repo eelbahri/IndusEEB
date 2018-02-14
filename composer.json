@@ -1,0 +1,13 @@
+{
+    "name": "elyes/indus-eeb",
+    "description": "5A IW2 Elyes EL BAHRI",
+    "authors": [
+        {
+            "name": "eelbahri",
+            "email": "elyes.elbahri77@gmail.com"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.7"
+    }
+}
