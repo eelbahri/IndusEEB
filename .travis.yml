@@ -1,6 +1,17 @@
 language: php
 
-php: 7.0
+php:
+    7.0
+    7.1
 
 script:
     - if [[ "$WITH_COVERAGE" == "true" ]]; then xdebug-enable; fi
+
+# phpcs
+# security checker (sf)
+# envoie de mail
+
+deploy:
+    provider: heroku
+    api_key:
+        secure: 2ccc426a-6c3a-46a0-8207-e89d4440495e
