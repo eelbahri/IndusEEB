@@ -7,6 +7,14 @@ php:
 script:
     - if [[ "$WITH_COVERAGE" == "true" ]]; then xdebug-enable; fi
 
+install:
+    composer global require "squizlabs/php_codesniffer=*"
+    phpcs .
+    phpcbf .
+    composer global require friendsofphp/php-cs-fixer
+    php-cs-fixer fix .
+    php security-checker.phar security:check /path/to/composer.lock    
+
 deploy:
     provider: heroku
     api_key:
@@ -15,14 +23,6 @@ deploy:
     on:
         repo: eelbahri/IndusEEB
         branch: add_components
-
-install:
-    composer global require "squizlabs/php_codesniffer=*"
-    phpcs .
-    phpcbf .
-    composer global require friendsofphp/php-cs-fixer
-    php-cs-fixer fix .
-    php security-checker.phar security:check /path/to/composer.lock
 
 notifications:
     email:
