@@ -10,7 +10,7 @@ before_script:
 script:
     - if [[ "$WITH_COVERAGE" == "true" ]]; then xdebug-enable; fi
     - docker run --rm -v $PWD:/app phpqa/php-cs-fixer fix --show-progress=estimating --verbose .
-    - docker run --rm -v $PWD:/app phpqa/security-checker security:check composer.lock
+    - docker run --rm -v $PWD:/app phpqa/security-checker security:check
 
 deploy:
     provider: heroku

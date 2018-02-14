@@ -7,5 +7,7 @@
             "email": "elyes.elbahri77@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "fzaninotto/faker": "^1.7"
+    }
 }
