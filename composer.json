@@ -7,6 +7,9 @@
             "email": "elyes.elbahri77@gmail.com"
         }
     ],
+    "require": {
+        "php": "7.1.3"
+    },
     "require-dev": {
         "phpunit/phpunit": "^6.5"
     }
