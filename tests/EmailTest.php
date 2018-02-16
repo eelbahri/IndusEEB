@@ -9,9 +9,10 @@ final class EmailTest extends TestCase
 {
     public function testCanBeCreatedFromValidEmailAddress(): void
     {
+        $email = new Email("aa@bb.fr");
         $this->assertInstanceOf(
             Email::class,
-            Email::fromString('user@example.com')
+            $email->fromString('aa@bb.fr')
         );
     }
 
