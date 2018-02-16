@@ -1,10 +1,6 @@
 language: php
 
-php: 7.0 7.1
-
-matrix:
-    allow_failures:
-        - 7.0
+php: 7.1
 
 before_script:
     - composer install
@@ -12,7 +8,6 @@ before_script:
 script:
     - docker run --rm -v $PWD:/app phpqa/php-cs-fixer fix --show-progress=estimating --verbose .
     - docker run --rm -v $PWD:/app phpqa/security-checker security:check
-    - ./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/EmailTest
 
 deploy:
     provider: heroku
