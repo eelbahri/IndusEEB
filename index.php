@@ -1,7 +1,12 @@
 <?php
 
-echo "Hello World";
+    echo "Hello World";
 
+    $pi = "maybe";
+    $foo = true;
+    $foo ? $pi = "yes" : "no";
+
+    $res = "->" . $pi;
 ?>
 
-<div><p><img src="https://picsum.photos/200" alt="oui"></div></p>
+<img src="https://picsum.photos/200" alt="oui">
