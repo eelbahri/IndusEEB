@@ -4,5 +4,5 @@ echo "Hello World";
 
 ?>
 
-
-<img src="https://picsum.photos/200">
+<p>
+    <img src="https://picsum.photos/200" alt="oui">
