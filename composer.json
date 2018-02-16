@@ -7,9 +7,6 @@
             "email": "elyes.elbahri77@gmail.com"
         }
     ],
-    "require": {
-        "fzaninotto/faker": "^1.7"
-    },
     "require-dev": {
         "phpunit/phpunit": "^6.5"
     }
